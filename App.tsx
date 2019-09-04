@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
+import StyleSheet from 'react-native-extended-stylesheet';
 import * as Font from 'expo-font';
 import Fruktur from './assets/fruktur-regular.ttf';
 import colors from './app/constants/colors';
 import Text from './app/components/Text';
 import ExternalLink from './app/components/ExternalLink';
+
+StyleSheet.build();
 
 export default class App extends Component {
   componentDidMount() {
@@ -54,12 +57,11 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.yellow,
+    backgroundColor: colors.background,
     padding: 32,
     alignItems: 'center',
   },
   pageContainer: {
-    backgroundColor: colors.background,
     paddingVertical: 32,
     paddingHorizontal: 40,
     maxWidth: 880,

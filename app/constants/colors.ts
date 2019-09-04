@@ -4,7 +4,7 @@ const themeColors = {
   blue: '#00b9f1',
   yellow: isDarkMode() ? '#252526' : '#f9c00c',
   purple: '#7200da',
-  red: `hsl(9,79%,${isDarkMode() ? '63' : '53'}%)`,
+  red: '#c93633' || `hsl(9,79%,${isDarkMode() ? '63' : '53'}%)`,
 };
 
 const lightTheme = {
