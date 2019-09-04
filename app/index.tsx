@@ -59,7 +59,7 @@ function App() {
                 Expo Web
               </ExternalLink>
               . See the source code on{' '}
-              <ExternalLink href="https://github.com/jonsamp/portfolio">
+              <ExternalLink href="https://github.com/jonsamp/website">
                 GitHub
               </ExternalLink>
               .
