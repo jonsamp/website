@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text as RNText } from 'react-native';
-import StyleSheet from 'react-native-extended-stylesheet';
+import { Text as RNText, StyleSheet } from 'react-native';
+import { isSmallScreen } from '../constants/layout';
 import colors from '../constants/colors';
 
 interface TextProps {
@@ -11,7 +11,6 @@ interface TextProps {
   script?: boolean;
   header?: boolean;
   subheader?: boolean;
-  largeHeader?: boolean;
   [i: string]: any;
 }
 
@@ -35,7 +34,6 @@ function Text(props: TextProps) {
         script && styles.script,
         header && styles.header,
         subheader && styles.subheader,
-        largeHeader && styles.largeHeader,
         style,
       ]}
       {...rest}
@@ -47,11 +45,14 @@ function Text(props: TextProps) {
 
 export default Text;
 
+const fontMultiplier = isSmallScreen ? 0.85 : 1;
+
 const styles = StyleSheet.create({
   text: {
-    fontSize: 24,
-    lineHeight: 32,
+    fontSize: 20 * fontMultiplier,
+    lineHeight: 26 * fontMultiplier,
     color: colors.foreground,
+    fontWeight: '400',
   },
   code: {
     fontFamily: 'monospace',
@@ -62,21 +63,14 @@ const styles = StyleSheet.create({
   script: {
     fontFamily: 'script',
   },
-  largeHeader: {
-    fontSize: 52,
-    marginBottom: 16,
-    lineHeight: 63,
-  },
   header: {
-    fontSize: 34,
-    fontWeight: '900',
+    fontSize: 52 * fontMultiplier,
     marginBottom: 16,
-    lineHeight: 45,
+    lineHeight: 63 * fontMultiplier,
   },
   subheader: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    lineHeight: 42,
+    fontSize: 32 * fontMultiplier,
+    lineHeight: 42 * fontMultiplier,
     marginBottom: 12,
   },
 });

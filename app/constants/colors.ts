@@ -1,22 +1,14 @@
-import { isDarkMode } from '../helpers';
-
 const themeColors = {
   blue: '#00b9f1',
-  yellow: isDarkMode() ? '#252526' : '#f9c00c',
+  yellow: '#f9c00c',
   purple: '#7200da',
-  red: '#c93633' || `hsl(9,79%,${isDarkMode() ? '63' : '53'}%)`,
+  red: '#c83733',
 };
 
-const lightTheme = {
+const theme = {
   background: '#ffffff',
   foreground: '#000000',
   ...themeColors,
 };
 
-const darkTheme = {
-  background: '#333638',
-  foreground: '#eff2f3',
-  ...themeColors,
-};
-
-export default isDarkMode() ? darkTheme : lightTheme;
+export default theme;

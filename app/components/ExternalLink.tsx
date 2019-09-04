@@ -1,6 +1,6 @@
 import React from 'react';
 import Text from './Text';
-import { TouchableOpacity, Linking, StyleSheet } from 'react-native';
+import { Linking, StyleSheet } from 'react-native';
 
 interface ExternalLinkProps {
   href: string;
@@ -27,7 +27,7 @@ export default ExternalLink;
 const styles = StyleSheet.create({
   link: {
     textDecorationLine: 'underline',
-    textDecorationStyle: 'dotted',
-    fontStyle: 'italic',
+    textDecorationStyle: 'solid',
+    fontWeight: 'bold',
   },
 });
