@@ -1,0 +1,31 @@
+{
+  "background_color": "#ffffff",
+  "description": "A Neat Expo App",
+  "dir": "auto",
+  "display": "standalone",
+  "lang": "en",
+  "name": "Jon Samp's Website",
+  "orientation": "portrait",
+  "prefer_related_applications": true,
+  "related_applications": [],
+  "short_name": "Jon Samp's Website",
+  "start_url": ".",
+  "theme_color": "#4630EB",
+  "icons": [
+    {
+      "src": "/apple/icons/icon_180x180.5b430a4f8bb0ea0e4f870974d977a400.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple/icons/icon_192x192.fe9e90f565e9c529716ca0b7dd0f8990.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple/icons/icon_512x512.cd405482fed247b410cad607ba14b282.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
