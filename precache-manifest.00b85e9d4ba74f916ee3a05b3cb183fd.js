@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/./fonts/FontAwesome5_Solid.ttf"
   },
   {
-    "revision": "ac0c3c43848e7616a3fb",
-    "url": "/static/js/app.dc9e1d39.chunk.js"
+    "revision": "1d27e4df01762fdc896d",
+    "url": "/static/js/app.a34292f6.chunk.js"
   },
   {
     "revision": "0ae8a172eb4a96ddc0b0",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/./fonts/Ionicons.ttf"
   },
   {
-    "revision": "a1ae17c04a1674bbd4ebc41f7e75e1d5",
+    "revision": "009961db99fff2770920cacabba02762",
     "url": "/index.html"
   },
   {
