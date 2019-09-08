@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/./fonts/Ionicons.ttf"
   },
   {
-    "revision": "76071ccf7eecc0019b6dc0ae160d8dc3",
+    "revision": "d91e4cc5afd3269edddd474e8bb545a8",
     "url": "/index.html"
   },
   {
