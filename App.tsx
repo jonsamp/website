@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import * as Font from "expo-font";
 import { useTheme, useFontSize } from "./hooks";
 import { H1, H2, P, Em, Link, TextButton } from "./components/Type";
@@ -33,11 +33,37 @@ export default function App() {
   return (
     <View style={[styles.wrapper, theme.view]}>
       <View style={styles.container}>
-        <H1>Jon Samp's website</H1>
+        <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
+          <View
+            style={{
+              shadowOffset: { width: 0, height: 2 },
+              shadowColor: "black",
+              shadowOpacity: 0.1,
+              shadowRadius: 4,
+              borderRadius: 8,
+              width: 68,
+              height: 68,
+              overflow: "hidden",
+              borderWidth: 4,
+              borderColor: theme.view.backgroundColor,
+              marginBottom: useFontSize(1),
+              marginRight: useFontSize(0.75)
+            }}
+          >
+            <Image
+              source={require("./assets/yellow.jpg")}
+              style={{
+                width: 60,
+                height: 60
+              }}
+            />
+          </View>
+          <H1>Jon Samp</H1>
+        </View>
         <P>
           👋 Hi! I'm a software developer at{" "}
           <Link href="https://expo.io">Expo</Link> in New York City, where I
-          work on mostly frontend projects. I love making quality user
+          work on frontend and design projects. I love making quality user
           experiences with JavaScript, React Native, and Expo. You can find me
           on <Link href="https://github.com/jonsamp">GitHub</Link>,{" "}
           <Link href="https://dev.to/jonsamp">Dev.to</Link>, and{" "}
@@ -64,8 +90,8 @@ export default function App() {
           <P>
             Then I moved to Chicago, taught myself Ruby on Rails, and was
             incredibly lucky to find a job as a developer. The problem was the
-            job was writing JavaScript. They took a chance on me and I studied
-            JavaScript every day on the train. I eventually wrote a{" "}
+            job required writing JavaScript. They took a chance on me and I
+            studied JavaScript every day on the train. I eventually wrote a{" "}
             <Link href="https://www.codecadEmy.com/learn/introduction-to-javascript">
               course on JavaScript
             </Link>
@@ -75,9 +101,9 @@ export default function App() {
         )}
         {page >= 3 && (
           <P>
-            Finally, I moved to New York City. While I <Em>hated</Em> it at
-            first, now I love it more than I can say. I have a sassy dog named
-            Nikko (she has a{" "}
+            Finally, I moved to New York City. While I hated it at first, now I
+            love it more than I can say. I have a sassy dog named Nikko (she has
+            a{" "}
             <Link href="https://www.instagram.com/nikko__dog/">
               must-see Instagram
             </Link>
@@ -116,7 +142,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    maxWidth: 960,
+    maxWidth: 840,
     paddingHorizontal: 16
   }
 });
