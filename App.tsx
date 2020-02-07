@@ -96,7 +96,7 @@ export default function App() {
         <Divider />
         <P>
           This website is built with <Link href="https://docs.expo.io/versions/v33.0.0/introduction/running-in-the-browser/">Expo Web</Link> 💙. You can see its source code on
-          <Link href="https://github.com/jonsamp/website">GitHub</Link>.
+           <Link href="https://github.com/jonsamp/website">GitHub</Link>.
         </P>
         <View style={{ height: useFontSize(3) }} />
       </View>
