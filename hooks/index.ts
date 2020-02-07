@@ -24,21 +24,26 @@ export function useTheme() {
     darkModeMatcher.addListener(({ matches }) => setDark(matches));
   }, []);
 
+  const colors = {
+    white: "#FBFBFB",
+    black: "#1C1B20"
+  };
+
   const dark = {
     view: {
-      backgroundColor: "rgba(0,0,0,0.9)"
+      backgroundColor: colors.black
     },
     text: {
-      color: "rgba(255,255,255,0.95)"
+      color: colors.white
     }
   };
 
   const light = {
     view: {
-      backgroundColor: "rgba(255,255,255,0.95)"
+      backgroundColor: colors.white
     },
     text: {
-      color: "rgba(0,0,0,0.9)"
+      color: colors.black
     }
   };
 

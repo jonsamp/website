@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View } from "react-native";
 import * as Font from "expo-font";
 import { useTheme, useFontSize } from "./hooks";
+import { Avatar } from "./components/Avatar";
+import { Divider } from "./components/Divider";
 import { H1, H2, P, Em, Link, TextButton } from "./components/Type";
 import projects from "./projects.json";
 
@@ -10,16 +12,6 @@ export default function App() {
   const theme = useTheme();
   const MoreText = () => (
     <TextButton onPress={() => setPage(page + 1)}>More...</TextButton>
-  );
-  const Divider = () => (
-    <View
-      style={{
-        borderWidth: 1,
-        borderColor: theme.text.color,
-        opacity: 0.15,
-        marginVertical: useFontSize(1)
-      }}
-    />
   );
 
   useEffect(function didMount() {
@@ -34,30 +26,7 @@ export default function App() {
     <View style={[styles.wrapper, theme.view]}>
       <View style={styles.container}>
         <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
-          <View
-            style={{
-              shadowOffset: { width: 0, height: 2 },
-              shadowColor: "black",
-              shadowOpacity: 0.1,
-              shadowRadius: 4,
-              borderRadius: 8,
-              width: 68,
-              height: 68,
-              overflow: "hidden",
-              borderWidth: 4,
-              borderColor: theme.view.backgroundColor,
-              marginBottom: useFontSize(1),
-              marginRight: useFontSize(0.75)
-            }}
-          >
-            <Image
-              source={require("./assets/yellow.jpg")}
-              style={{
-                width: 60,
-                height: 60
-              }}
-            />
-          </View>
+          <Avatar />
           <H1>Jon Samp</H1>
         </View>
         <P>
@@ -143,6 +112,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     maxWidth: 840,
-    paddingHorizontal: 16
+    paddingHorizontal: 20
   }
 });
