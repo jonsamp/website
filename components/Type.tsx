@@ -47,7 +47,7 @@ export const H2 = (props: any) => (
       textDecorationLine: "underline"
     }}
     accessibilityRole="link"
-    onPress={() => Linking.openURL(props.href)}
+    href={props.href}
   >
     {props.children}
   </BodyText>
@@ -68,8 +68,7 @@ export const Link = (props: any) => (
     fontFamily="Body"
     style={{ textDecorationLine: "underline", color: "#1E90FF" }}
     accessibilityRole="link"
-    onPress={() => Linking.openURL(props.href)}
-    target="_blank"
+    href={props.href}
   >
     {props.children}
   </BodyText>
