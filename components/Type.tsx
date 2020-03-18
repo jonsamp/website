@@ -40,23 +40,26 @@ export const H1 = (props: any) => (
 export const H2 = (props: any) => (
   <BodyText
     fontFamily="Header"
+    accessibilityRole="link"
+    href={props.href}
     style={{
       marginTop: useFontSize(1),
       marginBottom: useFontSize(0.25),
       fontSize: useFontSize(1.25),
       textDecorationLine: "underline"
     }}
-    accessibilityRole="link"
-    href={props.href}
+    {...props}
   >
     {props.children}
   </BodyText>
 );
 
 export const P = (props: any) => (
-  <BodyText fontFamily="Body" style={{ marginBottom: useFontSize(1) }}>
-    {props.children}
-  </BodyText>
+  <BodyText
+    fontFamily="Body"
+    style={{ marginBottom: useFontSize(1) }}
+    {...props}
+  />
 );
 
 export const Em = (props: any) => (

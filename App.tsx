@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import * as Font from "expo-font";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
-// import ExpoSvg from "./pages/ExpoSvg";
+import ExpoSvg from "./pages/ExpoSvg";
 
 export default function App() {
-  return <Home />;
+  useEffect(function didMount() {
+    Font.loadAsync({
+      Header: require("./assets/WorkSans-Black.otf"),
+      Body: require("./assets/sentinel-book.otf"),
+      BodyItalic: require("./assets/sentinel-bookItalic.otf")
+    });
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/react-native-expo-svg">
+          <ExpoSvg />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
 }

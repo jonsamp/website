@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet, ScrollView, View, Button } from "react-native";
-import * as Font from "expo-font";
+import React, { useState } from "react";
+import { StyleSheet, ScrollView, View } from "react-native";
 import { useTheme, useFontSize } from "../hooks";
 import { Avatar } from "../components/Avatar";
 import { Divider } from "../components/Divider";
@@ -13,14 +12,6 @@ export default function App() {
   const MoreText = () => (
     <TextButton onPress={() => setPage(page + 1)}>More...</TextButton>
   );
-
-  useEffect(function didMount() {
-    Font.loadAsync({
-      Header: require("../assets/WorkSans-Black.otf"),
-      Body: require("../assets/sentinel-book.otf"),
-      BodyItalic: require("../assets/sentinel-bookItalic.otf")
-    });
-  }, []);
 
   return (
     <ScrollView contentContainerStyle={[styles.wrapper, theme.view]}>
@@ -110,9 +101,11 @@ export default function App() {
 
 const styles = StyleSheet.create({
   wrapper: {
+    flex: 1,
     alignItems: "center"
   },
   container: {
+    flex: 1,
     maxWidth: 840,
     paddingHorizontal: 20
   }
