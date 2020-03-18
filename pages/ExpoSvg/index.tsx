@@ -1,35 +1,24 @@
-import React, { useEffect, useState } from "react";
-import {
-  Text,
-  ScrollView,
-  View,
-  StyleSheet,
-  TextInput,
-  Button
-} from "react-native";
-import * as Font from "expo-font";
+import React, { useState } from "react";
+import { Text, ScrollView, View, StyleSheet, TextInput } from "react-native";
 import { convertSvg } from "react-native-expo-svg/src/convert";
 import { H2 } from "../../components/Type";
 import { useTheme } from "../../hooks";
 import LogoIcon from "./LogoIcon";
 
 export default function ExpoSvg() {
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState({ RNSvg: null, usedElements: [] });
   const [error, setError] = useState("");
   const theme = useTheme();
 
-  useEffect(function didMount() {
-    Font.loadAsync({
-      Code: require("../../assets/OperatorMono-Book.otf")
-    });
-  }, []);
-
   function convertToExpoSvg(svg) {
     const test = async () => {
-      setResult("");
+      setResult({ RNSvg: null, usedElements: [] });
       setError("");
       try {
-        const result = await convertSvg(svg);
+        const result: {
+          RNSvg: string;
+          usedElements: string[];
+        } = await convertSvg(svg);
         console.log(result);
         setResult(result);
       } catch (error) {

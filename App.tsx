@@ -10,7 +10,8 @@ export default function App() {
     Font.loadAsync({
       Header: require("./assets/WorkSans-Black.otf"),
       Body: require("./assets/sentinel-book.otf"),
-      BodyItalic: require("./assets/sentinel-bookItalic.otf")
+      BodyItalic: require("./assets/sentinel-bookItalic.otf"),
+      Code: require("./assets/OperatorMono-Book.otf")
     });
   }, []);
 
@@ -20,7 +21,7 @@ export default function App() {
         <Route path="/react-native-expo-svg">
           <ExpoSvg />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>
