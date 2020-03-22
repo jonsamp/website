@@ -4,6 +4,7 @@ import { useTheme, useFontSize } from "../hooks";
 import { Avatar } from "../components/Avatar";
 import { Divider } from "../components/Divider";
 import { H1, H2, P, Em, Link, TextButton } from "../components/Type";
+import { AppleIcon, GitHubIcon, WebsiteIcon } from "../components/Icons";
 import projects from "../projects.json";
 
 export default function App() {
@@ -78,8 +79,41 @@ export default function App() {
         <Divider />
         {projects.map(project => (
           <View key={project.title}>
-            <View style={{ flexDirection: "row" }}>
-              <H2 href={project.href}>{project.title}</H2>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center"
+              }}
+            >
+              <H2>{project.title}</H2>
+
+              {project?.links?.apple && (
+                <View
+                  style={styles.link}
+                  accessibilityRole="link"
+                  href={project?.links?.apple}
+                >
+                  <AppleIcon />
+                </View>
+              )}
+              {project?.links?.github && (
+                <View
+                  style={styles.link}
+                  accessibilityRole="link"
+                  href={project?.links?.github}
+                >
+                  <GitHubIcon />
+                </View>
+              )}
+              {project?.links?.website && (
+                <View
+                  style={styles.link}
+                  accessibilityRole="link"
+                  href={project?.links?.website}
+                >
+                  <WebsiteIcon />
+                </View>
+              )}
             </View>
             <P>{project.description}</P>
           </View>
@@ -100,6 +134,15 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  link: {
+    height: 28,
+    width: 28,
+    backgroundColor: "#1E90FF",
+    top: 9,
+    marginLeft: 12,
+    padding: 6,
+    borderRadius: 2
+  },
   wrapper: {
     flex: 1,
     alignItems: "center"

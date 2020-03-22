@@ -1,50 +1,76 @@
 [
   {
+    "title": "Word Check",
+    "year": 2020,
+    "description": "The fastest and easiest way to check if a word is playable in the game of Scrabble.",
+    "links": {
+      "apple": "https://apps.apple.com/us/app/word-check-for-scrabble/id1489890340"
+    }
+  },
+  {
     "title": "Single Origin 2",
     "year": 2019,
-    "href": "https://singleoriginapp.com/",
-    "description": "Learn to brew specialty coffee with step by step instructions, calculations, and timers. Now on iPhone and iPad."
+    "description": "Learn to brew specialty coffee with step by step instructions, calculations, and timers. Now on iPhone and iPad.",
+    "links": {
+      "website": "https://singleoriginapp.com/",
+      "apple": "https://apps.apple.com/us/app/single-origin-2-coffee-timer/id1480168613?ls=1"
+    }
   },
   {
     "title": "Codecademy Go",
     "year": 2019,
-    "href": "https://itunes.apple.com/us/app/codecademy-go/id1376029326?mt=8",
-    "description": "Practice and review coding anywhere in five minutes, built with Expo."
+    "description": "Practice and review coding anywhere in five minutes, built with Expo.",
+    "links": {
+      "apple": "https://itunes.apple.com/us/app/codecademy-go/id1376029326?mt=8"
+    }
   },
   {
     "title": "Codecademy Go Cast",
     "year": 2019,
-    "href": "https://itunes.apple.com/us/podcast/codecademy-go-cast/id1450421834",
-    "description": "A podcast about building and maintaining Codecademy Go."
+    "description": "A podcast about building and maintaining Codecademy Go.",
+    "links": {
+      "apple": "https://itunes.apple.com/us/podcast/codecademy-go-cast/id1450421834"
+    }
   },
   {
     "title": "react-native-expo-svg",
     "year": 2019,
-    "href": "https://github.com/jonsamp/react-native-expo-svg",
-    "description": "Take a regular SVG, optimized it with SVGO, then creates an Expo-friendly SVG JS file for React Native."
+    "description": "Take a regular SVG, optimized it with SVGO, then creates an Expo-friendly SVG JS file for React Native.",
+    "links": {
+      "github": "https://github.com/jonsamp/react-native-expo-svg",
+      "website": "/react-native-expo-svg"
+    }
   },
   {
     "title": "Single Origin",
     "year": 2018,
-    "href": "https://apps.apple.com/us/app/single-origin-coffee-timer/id1316843624?ls=1",
-    "description": "Learn to brew specialty coffee."
+    "description": "Learn to brew specialty coffee.",
+    "links": {
+      "github": "https://apps.apple.com/us/app/single-origin-coffee-timer/id1316843624?ls=1"
+    }
   },
   {
     "title": "date-streaks",
     "year": 2018,
-    "href": "https://github.com/jonsamp/date-streaks",
-    "description": "Find a variety of streak metrics from a list of dates."
+    "description": "Find a variety of streak metrics from a list of dates.",
+    "links": {
+      "github": "https://github.com/jonsamp/date-streaks"
+    }
   },
   {
     "title": "react-native-header-scroll-view",
     "year": 2018,
-    "href": "https://github.com/jonsamp/react-native-header-scroll-view",
-    "description": "A React Native component that creates a Apple-esque large header that fades in a smaller header as you scroll."
+    "description": "A React Native component that creates a Apple-esque large header that fades in a smaller header as you scroll.",
+    "links": {
+      "github": "https://github.com/jonsamp/react-native-header-scroll-view"
+    }
   },
   {
     "title": "Vent",
     "year": 2017,
-    "href": "https://frozen-retreat-69078.herokuapp.com/",
-    "description": "Journaling app with sentiment analysis. You write, then it reveals your subconscious. It's spontaneous self reflection."
+    "description": "Journaling app with sentiment analysis. You write, then it reveals your subconscious. It's spontaneous self reflection.",
+    "links": {
+      "website": "https://frozen-retreat-69078.herokuapp.com/"
+    }
   }
 ]
