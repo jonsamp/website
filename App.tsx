@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import ExpoSvg from "./pages/ExpoSvg";
+import YearOne from "./pages/YearOne";
 
 export default function App() {
   useEffect(function didMount() {
@@ -18,8 +19,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/react-native-expo-svg">
+        <Route exact path="/react-native-expo-svg">
           <ExpoSvg />
+        </Route>
+        <Route exact path="/year-one">
+          <YearOne />
         </Route>
         <Route exact path="/">
           <Home />

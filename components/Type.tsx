@@ -61,7 +61,9 @@ export const P = (props: any) => (
 );
 
 export const Em = (props: any) => (
-  <BodyText fontFamily="BodyItalic">{props.children}</BodyText>
+  <BodyText fontFamily="BodyItalic" style={props.style}>
+    {props.children}
+  </BodyText>
 );
 
 export const Link = (props: any) => (
