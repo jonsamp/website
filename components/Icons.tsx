@@ -48,3 +48,15 @@ export function WebsiteIcon() {
     </Svg>
   );
 }
+
+export function AndroidIcon() {
+  const theme = useTheme();
+  return (
+    <Svg width={16} height={25} viewBox="0 0 24 25" fill="none">
+      <Path
+        d="M17.063 15.425a.919.919 0 010-1.838.918.918 0 010 1.838zm-10.126 0a.919.919 0 010-1.838.918.918 0 010 1.838zM17.391 9.89l1.831-3.18a.38.38 0 10-.66-.382l-1.853 3.22A11.27 11.27 0 0012 8.537a11.27 11.27 0 00-4.709 1.01L5.438 6.326a.38.38 0 10-.66.382l1.83 3.181C3.466 11.605 1.316 14.798 1 18.57h22c-.315-3.771-2.465-6.964-5.609-8.68z"
+        fill={theme.view.backgroundColor}
+      />
+    </Svg>
+  );
+}

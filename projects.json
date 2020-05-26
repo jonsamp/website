@@ -1,5 +1,15 @@
 [
   {
+    "title": "Gray One",
+    "year": 2020,
+    "description": "Gray One allows you to journal about everyday moments to once-in-a-lifetime events with a simple and elegant interface. Start journaling in an instant.",
+    "links": {
+      "apple": "https://apps.apple.com/us/app/gray-one/id1515200066?ls=1",
+      "android": "https://jovial-sammet-3cec91.netlify.app/",
+      "website": "https://jovial-sammet-3cec91.netlify.app/"
+    }
+  },
+  {
     "title": "Word Check",
     "year": 2020,
     "description": "The fastest and easiest way to check if a word is playable in the game of Scrabble.",

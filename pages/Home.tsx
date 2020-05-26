@@ -4,7 +4,12 @@ import { useTheme, useFontSize } from "../hooks";
 import { Avatar } from "../components/Avatar";
 import { Divider } from "../components/Divider";
 import { H1, H2, P, Em, Link, TextButton } from "../components/Type";
-import { AppleIcon, GitHubIcon, WebsiteIcon } from "../components/Icons";
+import {
+  AppleIcon,
+  GitHubIcon,
+  WebsiteIcon,
+  AndroidIcon,
+} from "../components/Icons";
 import projects from "../projects.json";
 
 export default function App() {
@@ -77,12 +82,12 @@ export default function App() {
           </P>
         )}
         <Divider />
-        {projects.map(project => (
+        {projects.map((project) => (
           <View key={project.title}>
             <View
               style={{
                 flexDirection: "row",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <H2>{project.title}</H2>
@@ -94,6 +99,15 @@ export default function App() {
                   href={project?.links?.apple}
                 >
                   <AppleIcon />
+                </View>
+              )}
+              {project?.links?.android && (
+                <View
+                  style={styles.link}
+                  accessibilityRole="link"
+                  href={project?.links?.android}
+                >
+                  <AndroidIcon />
                 </View>
               )}
               {project?.links?.github && (
@@ -141,15 +155,15 @@ const styles = StyleSheet.create({
     top: 9,
     marginLeft: 12,
     padding: 6,
-    borderRadius: 2
+    borderRadius: 2,
   },
   wrapper: {
     flex: 1,
-    alignItems: "center"
+    alignItems: "center",
   },
   container: {
     flex: 1,
     maxWidth: 840,
-    paddingHorizontal: 20
-  }
+    paddingHorizontal: 20,
+  },
 });
