@@ -46,7 +46,7 @@ export default function App() {
               me!
             </Em>
             ). At the same time, I was interested in higher education. I found a
-            job as an admissions counselor, and proceeded to spend a year
+            job as an admissions counselor and proceeded to spend a year
             driving hundreds of miles around rural Kansas while talking to high
             schoolers and their parents about education.{" "}
             {page === 1 && <MoreText />}
@@ -55,9 +55,8 @@ export default function App() {
         {page >= 2 && (
           <P>
             Then I moved to Chicago, taught myself Ruby on Rails, and was
-            incredibly lucky to find a job as a developer. The problem was the
-            job required writing JavaScript. They took a chance on me and I
-            studied JavaScript every day on the train. I eventually wrote a{" "}
+            incredibly lucky to find a job as a developer... as a JavaScript developer. While I didn't know JavaScript, they took a chance on me and I
+            studied JavaScript every day on the train. I eventually wrote a whole{" "}
             <Link href='https://www.codecadEmy.com/learn/introduction-to-javascript'>
               course on JavaScript
             </Link>
@@ -67,14 +66,12 @@ export default function App() {
         )}
         {page >= 3 && (
           <P>
-            Finally, I moved to New York City. While I hated it at first, now I
-            love it more than I can say. I have a sassy dog named Nikko (she has
+            Finally, I moved to New York City. Specifically Brooklyn. I have a Shiba Inu named Nikko (she has
             a{" "}
             <Link href='https://www.instagram.com/nikko__dog/'>
               must-see Instagram
             </Link>
-            ). I love to run, brew specialty coffee (sorry I know it's a
-            coder-dude stereotype), and cook everything I see on{" "}
+            ) and an Orange Tabby named Proxie. I love to run, brew specialty coffee, and cook everything I see on{" "}
             <Link href='https://www.foodnetwork.com/shows/good-eats'>
               Good Eats
             </Link>
