@@ -28,12 +28,12 @@ export default function App() {
         </View>
         <P>
           👋 Hi! I'm a software developer at{" "}
-          <Link href="https://expo.io">Expo</Link> in New York City, where I
+          <Link href='https://expo.io'>Expo</Link> in New York City, where I
           work on frontend and design projects. I love making quality user
           experiences with JavaScript, React Native, and Expo. You can find me
-          on <Link href="https://github.com/jonsamp">GitHub</Link>,{" "}
-          <Link href="https://dev.to/jonsamp">Dev.to</Link>, and{" "}
-          <Link href="https://twitter.com/jonsamp">Twitter</Link>. Also, there's
+          on <Link href='https://github.com/jonsamp'>GitHub</Link>,{" "}
+          <Link href='https://codepen.io/jonsamp'>Codepen</Link>, and{" "}
+          <Link href='https://twitter.com/jonsamp'>Twitter</Link>. Also, there's
           a list of my side-projects and packages below. Thanks for stopping by!{" "}
           {page === 0 && <MoreText />}
         </P>
@@ -58,7 +58,7 @@ export default function App() {
             incredibly lucky to find a job as a developer. The problem was the
             job required writing JavaScript. They took a chance on me and I
             studied JavaScript every day on the train. I eventually wrote a{" "}
-            <Link href="https://www.codecadEmy.com/learn/introduction-to-javascript">
+            <Link href='https://www.codecadEmy.com/learn/introduction-to-javascript'>
               course on JavaScript
             </Link>
             . I still think about JavaScript every day (
@@ -70,12 +70,12 @@ export default function App() {
             Finally, I moved to New York City. While I hated it at first, now I
             love it more than I can say. I have a sassy dog named Nikko (she has
             a{" "}
-            <Link href="https://www.instagram.com/nikko__dog/">
+            <Link href='https://www.instagram.com/nikko__dog/'>
               must-see Instagram
             </Link>
             ). I love to run, brew specialty coffee (sorry I know it's a
             coder-dude stereotype), and cook everything I see on{" "}
-            <Link href="https://www.foodnetwork.com/shows/good-eats">
+            <Link href='https://www.foodnetwork.com/shows/good-eats'>
               Good Eats
             </Link>
             .
@@ -95,7 +95,7 @@ export default function App() {
               {project?.links?.apple && (
                 <View
                   style={styles.link}
-                  accessibilityRole="link"
+                  accessibilityRole='link'
                   href={project?.links?.apple}
                 >
                   <AppleIcon />
@@ -104,7 +104,7 @@ export default function App() {
               {project?.links?.android && (
                 <View
                   style={styles.link}
-                  accessibilityRole="link"
+                  accessibilityRole='link'
                   href={project?.links?.android}
                 >
                   <AndroidIcon />
@@ -113,7 +113,7 @@ export default function App() {
               {project?.links?.github && (
                 <View
                   style={styles.link}
-                  accessibilityRole="link"
+                  accessibilityRole='link'
                   href={project?.links?.github}
                 >
                   <GitHubIcon />
@@ -122,7 +122,7 @@ export default function App() {
               {project?.links?.website && (
                 <View
                   style={styles.link}
-                  accessibilityRole="link"
+                  accessibilityRole='link'
                   href={project?.links?.website}
                 >
                   <WebsiteIcon />
@@ -135,11 +135,11 @@ export default function App() {
         <Divider />
         <P>
           This website is built with{" "}
-          <Link href="https://docs.expo.io/versions/v33.0.0/introduction/running-in-the-browser/">
+          <Link href='https://docs.expo.io/versions/v33.0.0/introduction/running-in-the-browser/'>
             Expo Web
           </Link>{" "}
           💙. You can see its source code on{" "}
-          <Link href="https://github.com/jonsamp/website">GitHub</Link>.
+          <Link href='https://github.com/jonsamp/website'>GitHub</Link>.
         </P>
         <View style={{ height: useFontSize(3) }} />
       </View>
