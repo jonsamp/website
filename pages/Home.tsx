@@ -19,6 +19,10 @@ export default function App() {
     <TextButton onPress={() => setPage(page + 1)}>More...</TextButton>
   );
 
+  function byDisplayed(project) {
+    return project.displayed;
+  }
+
   return (
     <ScrollView contentContainerStyle={[styles.wrapper, theme.view]}>
       <View style={styles.container}>
@@ -46,8 +50,8 @@ export default function App() {
               me!
             </Em>
             ). At the same time, I was interested in higher education. I found a
-            job as an admissions counselor and proceeded to spend a year
-            driving hundreds of miles around rural Kansas while talking to high
+            job as an admissions counselor and proceeded to spend a year driving
+            hundreds of miles around rural Kansas while talking to high
             schoolers and their parents about education.{" "}
             {page === 1 && <MoreText />}
           </P>
@@ -55,8 +59,10 @@ export default function App() {
         {page >= 2 && (
           <P>
             Then I moved to Chicago, taught myself Ruby on Rails, and was
-            incredibly lucky to find a job as a developer... as a JavaScript developer. While I didn't know JavaScript, they took a chance on me and I
-            studied JavaScript every day on the train. I eventually wrote a whole{" "}
+            incredibly lucky to find a job as a developer... as a JavaScript
+            developer. While I didn't know JavaScript, they took a chance on me
+            and I studied JavaScript every day on the train. I eventually wrote
+            a whole{" "}
             <Link href='https://www.codecadEmy.com/learn/introduction-to-javascript'>
               course on JavaScript
             </Link>
@@ -66,12 +72,13 @@ export default function App() {
         )}
         {page >= 3 && (
           <P>
-            Finally, I moved to New York City. Specifically Brooklyn. I have a Shiba Inu named Nikko (she has
-            a{" "}
+            Finally, I moved to New York City. Specifically Brooklyn. I have a
+            Shiba Inu named Nikko (she has a{" "}
             <Link href='https://www.instagram.com/nikko__dog/'>
               must-see Instagram
             </Link>
-            ) and an Orange Tabby named Proxie. I love to run, brew specialty coffee, and cook everything I see on{" "}
+            ) and an Orange Tabby named Proxie. I love to run, brew specialty
+            coffee, and cook everything I see on{" "}
             <Link href='https://www.foodnetwork.com/shows/good-eats'>
               Good Eats
             </Link>
@@ -79,7 +86,7 @@ export default function App() {
           </P>
         )}
         <Divider />
-        {projects.map((project) => (
+        {projects.filter(byDisplayed).map((project) => (
           <View key={project.title}>
             <View
               style={{
